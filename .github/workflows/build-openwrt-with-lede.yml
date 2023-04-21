@@ -237,7 +237,6 @@ jobs:
           tag: ${{ steps.compile.outputs.build_tag }}
           artifacts: openwrt/bin/targets/*/*/*rootfs.tar.gz
           allowUpdates: true
-          token: ${{ secrets.GH_TOKEN }}
 
       - name: Clean up server space
         if: ${{ steps.compile.outputs.status }} == 'success' && !cancelled()
@@ -256,7 +255,6 @@ jobs:
           auto_kernel: ${{ inputs.auto_kernel }}
           kernel_repo: ${{ inputs.kernel_repo }}
           kernel_usage: ${{ inputs.kernel_usage }}
-          gh_token: ${{ secrets.GH_TOKEN }}
 
       - name: Upload the packaged firmware to Release
         uses: ncipollo/release-action@main
@@ -265,7 +263,6 @@ jobs:
           tag: ${{ steps.compile.outputs.build_tag }}
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
           allowUpdates: true
-          token: ${{ secrets.GH_TOKEN }}
           body: |
             This is OpenWrt firmware for Amlogic and Rockchip
             * Firmware information
