@@ -44,3 +44,9 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 # git apply ../config-openwrt/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
 # ------------------------------- Other ends -------------------------------
+
+# IPV6 disable
+# cut_line_n=$( grep -n "config\ IPV6" config/Config-build.in | cut -d ":" -f 1)
+cut_line_n=$( sed -n '/config\ IPV6/=' config/Config-build.in )
+cut_line_n=$(( $cut_line_n + 1 ))
+sed -i "${cut_line_n}s/def_bool\ y/def_bool\ n/" config/Config-build.in
