@@ -51,3 +51,7 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 #
 # ------------------------------- Other ends -------------------------------
 
+
+# temp 2023.05.23
+# rm target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
+sed -i 's/drivers\/bus\/mhi\/core\/main\.c/drivers\/bus\/mhi\/host\/main\.c/g' target/linux/generic/pending-5.15/790-bus-mhi-core-add-SBL-state-callback.patch
