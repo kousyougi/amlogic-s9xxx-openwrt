@@ -51,3 +51,36 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 #
 # ------------------------------- Other ends -------------------------------
 
+
+sed -i 's/dnsmasq-full / /g' include/target.mk
+sed -i 's/firewall / /g' include/target.mk
+sed -i 's/iptables / /g' include/target.mk
+sed -i 's/ppp / /g' include/target.mk
+sed -i 's/ppp-mod-pppoe / /g' include/target.mk
+sed -i 's/block-mount / /g' include/target.mk
+sed -i 's/coremark / /g' include/target.mk
+sed -i 's/kmod-nf-nathelper / /g' include/target.mk
+sed -i 's/kmod-nf-nathelper-extra / /g' include/target.mk
+sed -i 's/kmod-ipt-raw / /g' include/target.mk
+sed -i 's/kmod-tun / /g' include/target.mk
+sed -i 's/iptables-mod-tproxy / /g' include/target.mk
+sed -i 's/iptables-mod-extra / /g' include/target.mk
+sed -i 's/ip-full / /g' include/target.mk
+sed -i 's/default-settings / /g' include/target.mk
+sed -i 's/luci / /g' include/target.mk
+sed -i 's/luci-newapi / /g' include/target.mk
+sed -i 's/ddns-scripts_aliyun / /g' include/target.mk
+sed -i 's/ddns-scripts_dnspod / /g' include/target.mk
+sed -i 's/luci-app-ddns / /g' include/target.mk
+sed -i 's/luci-app-upnp / /g' include/target.mk
+sed -i 's/luci-app-autoreboot / /g' include/target.mk
+sed -i 's/luci-app-arpbind / /g' include/target.mk
+sed -i 's/luci-app-filetransfer / /g' include/target.mk
+sed -i 's/luci-app-vsftpd / /g' include/target.mk
+sed -i 's/luci-app-ssr-plus / /g' include/target.mk
+sed -i 's/luci-app-vlmcsd / /g' include/target.mk
+sed -i 's/luci-app-accesscontrol / /g' include/target.mk
+sed -i 's/luci-app-nlbwmon / /g' include/target.mk
+sed -i 's/luci-app-turboacc / /g' include/target.mk
+sed -i 's/luci-app-wol / /g' include/target.mk
+sed -i 's/ca-certificates//g' include/target.mk
